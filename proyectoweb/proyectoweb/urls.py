@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from proyectowebApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',views.home, name="Home"),
+    path('servicios',views.servicios, name="servicios"),
+    path('tienda',views.tienda, name="Tienda"),
+    path('blog',views.blog, name="Blog"),
+    path('contactos',views.contactos, name="contactos"),
+
 ]
