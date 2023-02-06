@@ -12,8 +12,8 @@ def sitios(request):
 def tienda(request):
     return render(request, "proyectowebApp/tienda.html")
 
-def blog(request):
-    return render(request, "proyectowebApp/blog.html")
+def usuario(request):
+    return render(request, "proyectowebApp/usuario.html")
 
-def contactos(request):
-    return render(request, "proyectowebApp/contactos.html")
+def visitante(request):
+    return render(request, "proyectowebApp/visitante.html")
