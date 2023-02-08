@@ -1,25 +1,38 @@
 
-body {
-    background: #14c773;
-    background: -webkit-linear-gradient(to bottom, #74ebd5, #acb6e5);
-    background: linear-gradient(to bottom, #74ebd5, #acb6e5);
-    font-size: 16px;
-    line-height: 1.2;
-    color: #888;
-}
 
-.contenedor{
+form{
+    text-align: center;
+    background: black;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-right: auto;;
+}
+.tabla{
+    text-align: center;
     border: 1px red solid;
-    margin: 100pxs;
-    position: center;
+    background: rgb(97, 159, 209);
+    margin: 0px auto;
+    margin-bottom: 40px;
+    border-collapse: collapse;
+    padding: 300px;
 }
 
-.form{
-    position: center;
+.par{
+    text-align: center;
+    color: rgb(204, 24, 204);
+    padding: 20px;
 }
+.tabla2 {
+    table-layout: fixed;
+    width: 250px;
+    height: 100px;
+}
+.tablacont{
+width: 100%;
+color: aliceblue;
 
-.hola{
-    position: center;
-    margin: 30px;
-    border: 5px rgb(14, 15, 15) solid,
-}
+text-align: center;
+table-layout: fixed;
+width: 450px;
+border: 1px red solid;
+}  

@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styles -->
+    <link href="{% static 'proyectowebApp/css/header.css' %}" rel="stylesheet">
+
+    <title>Document</title>
+
+</head>
+<body>
+
+</body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>sam</h1>
+            </div>
+            <nav class="menu">
+                <a href="{% url 'Presentacion' %}">Presentacion</a>
+                <a href="#">Usuario</a>
+                <a href="#">sitio</a>
+                <a href="#">Visitante</a>
+                <a href="#">guia</a>
+            </nav>
+        </div>
+    </header>
+</html>
+
+<!-- contenido canbiante-->
+{% block content %}  
+
+{% endblock %}
