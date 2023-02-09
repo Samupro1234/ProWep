@@ -3,17 +3,19 @@
 {% load static %}
 
 {% block content %}
-<link href="{% static 'proyectowebApp/css/sitio.css' %}" rel="stylesheet">
 
 <div id="contenedor">
     <div id="contenedorcentrado">
         <div id="login">
-            <form id="formulario-sitio-arqueologico">
-                <label for="sitio">Sitio Arqueologico</label>
-                <input id="sitio" type="text" name="sitio" placeholder="sitio" required>
+            <form id="formulario-guia">
+                <label for="nomb-guia">Nombre de Guia</label>
+                <input id="nomb-guia" type="text" name="nomb-guia" placeholder="nomb-guia" required>
                 
-                <label for="aforo">Aforo</label>
-                <input id="aforo" type="number" placeholder="aforo" name="aforo" required>
+                <label for="apell-guia">Apellido Guia</label>
+                <input id="apell-guia" type="text" name="apell-guia" placeholder="apell-guia" required>
+                
+                <label for="dni">DNI</label>
+                <input id="dni" type="number" placeholder="DNI" name="dni" required>
                 
                 <button type="submit" title="Ingresar" name="Ingresar">Login</button>
             </form>
@@ -21,7 +23,7 @@
         </div>
         <div id="derecho">
             <div class="titulo">
-                Sitio Arqueologico
+                Guia
             </div>
             <hr>
             <div class="pie-form">
@@ -33,6 +35,4 @@
         </div>
     </div>
 </div>
-
-
 {% endblock %}

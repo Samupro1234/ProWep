@@ -1,3 +1,4 @@
+
 {% load static %}
 
 <!DOCTYPE html>
@@ -7,32 +8,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Styles -->
-    <link href="{% static 'proyectowebApp/css/header.css' %}" rel="stylesheet">
-
-    <title>Document</title>
+    <link href="{% static 'proyectowebApp/css/inicio.css' %}" rel="stylesheet">
+	
+    <title>headers-footders</title>
 
 </head>
-<body>
-
-</body>
-
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <h1>sam</h1>
-            </div>
-            <nav class="menu">
-                <a href="{% url 'Presentacion' %}">Presentacion</a>
-                <a href="#">Usuario</a>
-                <a href="#">sitio</a>
-                <a href="#">Visitante</a>
-                <a href="#">guia</a>
+    <body>
+        <header>
+            <a href="{% url 'Presentacion' %}" class="logo">
+                <img src="{% static 'proyectowebApp/img/logo.png' %}" alt="" srcset="">
+                <h2 class="nombre-empresa">Aforo</h2>
+            </a>
+            <nav>
+                <a href="{% url 'Presentacion' %}" class="nav-link">Presentacion</a>
+                <a href="{% url 'Usuario' %}" class="nav-link">Usuario</a>
+                <a href="{% url 'Sitios' %}" class="nav-link">Sitio</a>
+                <a href="{% url 'Guia' %}" class="nav-link">Guia</a>
+                <a href="{% url 'Visitante' %}" class="nav-link">visitante</a>
+                <a href="" class="nav-link"></a>
             </nav>
-        </div>
-    </header>
+        </header>
+
+
+    <!-- contenido canbiante-->
+    {% block content %}  
+
+    {% endblock %}
+
+    <!--Pie de PAgia-->
+    <div class="aguas">
+        <div class="agua" id="agua1"></div>
+        <div class="agua" id="agua2"></div>
+        <div class="agua" id="agua3"></div>
+        <div class="agua" id="agua4"></div>
+    </div>
+    <div>
+        <footer>
+            <ul class="social-icon">
+                <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href=""><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href=""><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                <li><a href=""><ion-icon name="logo-instagram"></ion-icon></a></ion-icon></li>
+            </ul>
+            <ul class="menu">
+                <li><a href="#">Presentacion</a></li>
+                <li><a href="#">Usuario</a></li>
+                <li><a href="#">Sitio</a></li>
+                <li><a href="#">Guia</a></li>
+                <li><a href="#">Visitante</a></li>
+            </ul>
+            <p>-2023 Derechos reservados de autor Samupro</p>
+        </footer>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
 </html>
 
-<!-- contenido canbiante-->
-{% block content %}  
 
-{% endblock %}
+
