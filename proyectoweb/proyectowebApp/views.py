@@ -9,10 +9,12 @@ def presentacion(request):
 def sitios(request):
     return render(request, "proyectowebApp/sitios.html")
 
-def tienda(request):
-    return render(request, "proyectowebApp/tienda.html")
+def guia(request):
+    return render(request, "proyectowebApp/guia.html")
 
 def usuario(request):
+    request.post['nombre']
+    
     return render(request, "proyectowebApp/usuario.html")
 
 def visitante(request):
