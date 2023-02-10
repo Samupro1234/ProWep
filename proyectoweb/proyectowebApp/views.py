@@ -6,14 +6,24 @@ from proyectowebAppAforo.models import usuario, guia, sitio, visitante
 def presentacion(request):
     return render(request, "proyectowebApp/presentacion.html")
 
-def sitios(request):
+def usuario(request):
     if request.method == "POST":
         nombre = request.POST['nombre']
         apellido = request.POST['apellido']
         email = request.POST['email']
         password = request.POST['password']
-        sitio = sitio(nombre=nombre, apellido=apellido, email=email, password=password)
-        sitio.save()
+        usuario = usuario(nombre=nombre, apellido=apellido, email=email, password=password)
+        usuario.save()
+        return render(request, "proyectowebApp/usuario.html")
+        print('hola')
+    return render(request, "proyectowebApp/usuario.html")
+
+def sitios(request):
+    if request.method == "POST":
+        nombre_sitio = request.POST['sitio']
+        aforo = request.POST['aforo']
+        sitios = sitio(nombre_sitio=nombre_sitio, aforo=aforo)
+        sitios.save()
         return render(request, "proyectowebApp/sitios.html")
     return render(request, "proyectowebApp/sitios.html")
 
@@ -31,17 +41,6 @@ def guia(request):
 
     return render(request, "proyectowebApp/guia.html")
 
-def usuario(request):
-    if request.method == "POST":
-        nombre = request.POST['nombre']
-        apellido = request.POST['apellido']
-        email = request.POST['email']
-        password = request.POST['password']
-        usuario = usuario(nombre=nombre, apellido=apellido, email=email, password=password)
-        usuario.save()
-        return render(request, "proyectowebApp/usuario.html")
-        print('hola')
-    return render(request, "proyectowebApp/usuario.html")
 
 def visitante(request):
     if request.method == "POST":

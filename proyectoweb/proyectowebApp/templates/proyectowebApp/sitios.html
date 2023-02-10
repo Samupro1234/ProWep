@@ -8,7 +8,7 @@
 <div id="contenedor">
     <div id="contenedorcentrado">
         <div id="login">
-            <form id="formulario-sitio-arqueologico">
+            <form id="formulario-sitio-arqueologico" method="POST">
                 {% csrf_token %}
                 <label for="sitio">Sitio Arqueologico</label>
                 <input id="sitio" type="text" name="sitio" placeholder="sitio" required>
@@ -16,7 +16,7 @@
                 <label for="aforo">Aforo</label>
                 <input id="aforo" type="number" placeholder="aforo" name="aforo" required>
                 
-                <button type="submit" title="Ingresar" name="Ingresar">Login</button>
+                <button type="submit" title="Ingresar" name="Ingresar">Guardar</button>
             </form>
             
         </div>
