@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+
 class usuario(models.Model):
     nombres = models.CharField(max_length=175)
     apellidos = models.CharField(max_length=175)
@@ -28,7 +29,7 @@ class visitante(models.Model):
     nacionalidad = models.CharField(max_length=100)
     
     def __str__(self):
-        return f'%s (%s)' % (self.nomb_visitante, self.apell_visitante, self.num_documento, self.nacionalidad)
+        return self.nomb_visitante
 
 
 class guia(models.Model):
