@@ -9,6 +9,7 @@
     <div id="contenedorcentrado">
         <div id="login">
             <form id="formulario-sitio-arqueologico">
+                {% csrf_token %}
                 <label for="sitio">Sitio Arqueologico</label>
                 <input id="sitio" type="text" name="sitio" placeholder="sitio" required>
                 

@@ -9,7 +9,7 @@
     <div id="contenedorcentrado">
         <div id="login">
             <form id="loginform">
-
+                {% csrf_token %}
                 <label for="nombre">Nombre</label>
                 <input id="nombre" type="text" name="nombre" placeholder="nombre" required>
 

@@ -8,6 +8,7 @@
     <div id="contenedorcentrado">
         <div id="login">
             <form id="formulario-guia">
+                {% csrf_token %}
                 <label for="nomb-guia">Nombre de Guia</label>
                 <input id="nomb-guia" type="text" name="nomb-guia" placeholder="nomb-guia" required>
                 
